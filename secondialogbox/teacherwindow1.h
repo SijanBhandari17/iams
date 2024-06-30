@@ -23,7 +23,7 @@ public:
             mydb = QSqlDatabase::database("qt_sql_default_connection");
         } else {
             mydb = QSqlDatabase::addDatabase("QSQLITE");
-            mydb.setDatabaseName("C:/Users/A S U S/Desktop/IAMS/database/iamsdata.db");
+            mydb.setDatabaseName("C:/Users/prabe/OneDrive/Desktop/IAMS/database/iamsdata.db");
         }
 
         if(!mydb.open()) {

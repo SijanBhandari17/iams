@@ -27,6 +27,7 @@ class Ui_studentwindow1
 public:
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
+    QLabel *label_4;
     QLabel *label;
     QLabel *label_2;
     QLineEdit *userEdit;
@@ -34,7 +35,7 @@ public:
     QLineEdit *passwordEdit;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
-    QPushButton *okbutton;
+    QPushButton *ok;
     QPushButton *backbutton;
 
     void setupUi(QDialog *studentwindow1)
@@ -42,12 +43,19 @@ public:
         if (studentwindow1->objectName().isEmpty())
             studentwindow1->setObjectName("studentwindow1");
         studentwindow1->resize(649, 434);
+        studentwindow1->setStyleSheet(QString::fromUtf8("background-color: rgb(230, 230, 250);\n"
+"color: black"));
         layoutWidget = new QWidget(studentwindow1);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(20, 0, 611, 411));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label_4 = new QLabel(layoutWidget);
+        label_4->setObjectName("label_4");
+
+        verticalLayout->addWidget(label_4);
+
         label = new QLabel(layoutWidget);
         label->setObjectName("label");
         label->setStyleSheet(QString::fromUtf8("QLabel{\n"
@@ -99,10 +107,10 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        okbutton = new QPushButton(layoutWidget);
-        okbutton->setObjectName("okbutton");
+        ok = new QPushButton(layoutWidget);
+        ok->setObjectName("ok");
 
-        horizontalLayout->addWidget(okbutton);
+        horizontalLayout->addWidget(ok);
 
         backbutton = new QPushButton(layoutWidget);
         backbutton->setObjectName("backbutton");
@@ -121,11 +129,12 @@ public:
     void retranslateUi(QDialog *studentwindow1)
     {
         studentwindow1->setWindowTitle(QCoreApplication::translate("studentwindow1", "Dialog", nullptr));
+        label_4->setText(QCoreApplication::translate("studentwindow1", "[+]status", nullptr));
         label->setText(QCoreApplication::translate("studentwindow1", "STUDENT LOGIN", nullptr));
         label_2->setText(QCoreApplication::translate("studentwindow1", "Username", nullptr));
         userEdit->setText(QString());
         label_3->setText(QCoreApplication::translate("studentwindow1", "Password", nullptr));
-        okbutton->setText(QCoreApplication::translate("studentwindow1", "Ok", nullptr));
+        ok->setText(QCoreApplication::translate("studentwindow1", "Ok", nullptr));
         backbutton->setText(QCoreApplication::translate("studentwindow1", "Back", nullptr));
     } // retranslateUi
 

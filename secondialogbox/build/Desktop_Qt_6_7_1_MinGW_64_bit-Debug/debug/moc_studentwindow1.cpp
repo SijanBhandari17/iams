@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../studentwindow1.h"
+#include "../../../../../project/secondialogbox/studentwindow1.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>

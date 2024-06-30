@@ -43,6 +43,8 @@ public:
         if (SecDialog->objectName().isEmpty())
             SecDialog->setObjectName("SecDialog");
         SecDialog->resize(800, 600);
+        SecDialog->setStyleSheet(QString::fromUtf8("background-color: rgb(230, 230, 250);\n"
+"color: black"));
         layoutWidget = new QWidget(SecDialog);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(30, 10, 611, 411));
